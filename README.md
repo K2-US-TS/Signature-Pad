@@ -35,8 +35,19 @@ There is also a form called *Signature Pad Implementation* in the same category 
 
 
 ### Styling and Customization
-Currently, the Signature Pad has very limited theming applied to it. It is in essence just a canvas element but has a class defined for it called *signature-pad*. You can create any custom styling for this class and include it in the form, the canvas will render accordingly. Here is an example:
+#### Height and Width
+The Signature Pad's width and height is set using the following parameters:
+1. **PadHeight**: Default of 200
+1. **PadWidth**: Default of 550
+
+Update the parameters before or as part of the Views' Initialize events and it will resize.
+
+#### Pen Color
+The color of the pen's "ink" can be set by setting the **PenColor** parameter. It uses RGB values, the default being 0,0,0 (Black).
+
+#### Canvas Color
+The color of the canvas can be changed from the default white (255,255,255,0.5) to the color of choice, using the RGB format, by setting the **CanvasColor** parameter. Note that in the case of the canvas, the opacity can also be set.
+
+Additional styling can be done using CSS. The control is in essence just a canvas element with a class called *signature-pad* tied to it. You can create any custom styling for this class and include it in the form, the canvas will render accordingly. Here is an example:
 
 [Signature Pad Styling](http://szimek.github.io/signature_pad/css/signature-pad.css)
-
-The only easy customization included right now is to set the pad's height and width. Pass your custom values into parameters when the views are initialized and it will scale accordingly. Just ensure that you use the same settings for both the capture and redraw views, else the signature could be truncated. 
