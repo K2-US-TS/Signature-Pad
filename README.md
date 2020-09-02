@@ -11,7 +11,7 @@ The Signature Pad component has two views, one allowing you to capture signature
 
 ## Using the Signature Pad Views in your Forms
 ### Capturing a Signature
-Use the view called *Signature Pad - Sign*, located in the **Common/Signature Pad** directory. Simply add the view to your form and initialize it by:
+Use the view called *Signature Pad - Sign*, located in the **Common/Signature Pad** category. Simply add the view to your form and initialize it by:
 1. Adding (or editing) the *When the server loads the Form* rule
 1. Add an action of *Execute a server rule*
 1. Select the *Initialize Signature Pad* rule of the added view
@@ -22,7 +22,7 @@ When the form loads, the pad will be active and ready to capture signatures. Onc
 
 
 ### Redrawing the Signature
-Use the view called *Signature Pad - View Signature*, located in the **Common/Signature Pad** directory. As with the capture view, simply add the view to your form and initialize it by:
+Use the view called *Signature Pad - View Signature*, located in the **Common/Signature Pad** category. As with the capture view, simply add the view to your form and initialize it by:
 1. Adding (or editing) the *When the server loads the Form* rule
 1. Add an action of *Execute a server rule*
 1. Select the *Initialize Signature View Pad* rule of the added view
@@ -31,7 +31,7 @@ When the saved data from the capture action becomes available, either when the f
 1. Transfer it from the source control to the *Signature Pad - View Signature* view's control called *Data Label Saved Signature Data*
 1. Execute the viewrule Set Data on the *Signature Pad - View Signature* view
 
-There is also a form called *Signature Pad Implementation* in the same category where the views are location that shows a working implementation.
+There is also a form called *Signature Pad Implementation* in the same category where the views are located, showing a working implementation that can be used as a reference.
 
 
 ### Styling and Customization
