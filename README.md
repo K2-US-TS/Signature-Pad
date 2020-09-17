@@ -27,11 +27,15 @@ Use the view called *Signature Pad - View Signature*, located in the **Common/Si
 1. Add an action of *Execute a server rule*
 1. Select the *Initialize Signature View Pad* rule of the added view
 
+Prepare the form for rendering<br>
+The script that redraws the signature expects the control to be labeled in a certain way, but that creates challenges when using the view multiple times on a single form. To allow the dynamic controls to be accessed by the scripts, some prep work needs to happen and that is done on using the *viewrule Prepare for Set Data* rule on the view. However, this needs to be done just once on the form, so this can't be bundled in the view's Initialze method. So after all the redraw views' Initialize rules have fired, call just the first view's *viewrule Prepare to Draw Signature* rule:<br>
+![Mapping](https://github.com/K2-US-TS/Images/blob/master/Documentation/Signature%20Pad/Redraw%20Sig.png?raw=true)
+
 When the saved data from the capture action becomes available, either when the form/view loads it or when the action completed that pulls this data:
 1. Transfer it from the source control to the *Signature Pad - View Signature* view's control called *Data Label Saved Signature Data*
-1. Execute the viewrule Set Data on the *Signature Pad - View Signature* view
+1. Execute the **viewrule Draw Signature** on the *Signature Pad - View Signature* view
 
-There is also a form called *Signature Pad Implementation* in the same category where the views are located, showing a working implementation that can be used as a reference.
+There are also two forms called *Signature Pad Implementation* and *Signature Pad Implementation - Multiple Redraw* in the same category where the views are located, showing two working implementations that can be used for reference.
 
 
 ### Styling and Customization
