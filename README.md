@@ -37,6 +37,9 @@ When the saved data from the capture action becomes available, either when the f
 
 There are also two forms called *Signature Pad Implementation* and *Signature Pad Implementation - Multiple Redraw* in the same category where the views are located, showing two working implementations that can be used for reference.
 
+##### Scaling
+The Redraw view has the option to scale the signature. This is useful when you have multiple signatures that you want to show on a read-only or additional approval forms. use the Scale parameter to adjust this, any decimal value will work, i.e. 0.5 or 0.25. You will need to set your own height and width if you want the pad's size to shrink as well.
+
 
 ### Styling and Customization
 #### Height and Width
